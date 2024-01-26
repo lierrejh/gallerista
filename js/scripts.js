@@ -1,99 +1,4 @@
-
-// "use strict";
-// jQuery(document).ready(function ($) {
-//     function convertToSlug(Text) {
-//         return Text.toLowerCase()
-//             .replace(/ /g, "-")
-//             .replace(/[^\w-]+/g, "");
-//     }
-
-//     window.arrayToTable = function (tableData) {
-//         var table = $('<table class="beReal-table"></table>');
-//         $(tableData).each(function (i, rowData) {
-//             // console.log(rowData[0]);
-
-//             if (i === 0) {
-//                 var row = $('<tr class="header"></tr>');
-//                 $(rowData).each(function (j, cellData) {
-//                     var columnHeaderClass = convertToSlug(cellData);
-//                     row.append($('<th class="' + columnHeaderClass + '">' + cellData + '</th>'));
-//                 });
-//             }
-//             if (i > 1) {
-//                 // console.log(rowData[0]);
-//                 var rowCellClass = convertToSlug(rowData[0]);
-
-//                 var row = $('<tr class="' + rowCellClass + '"></tr>');
-//                 $(rowData).each(function (j, cellData) {
-//                     var rowCellClassa = convertToSlug(cellData);
-//                     // console.log(columnHeaderClass);
-//                     row.append($('<td class="' + rowCellClassa + '">' + cellData + '</td>'));
-//                 });
-//             }
-
-//             table.append(row);
-//         });
-//         return table;
-//     }
-
-//     // window.arrayToPie = function (tableData) {
-//     //     var table = $('<table class="beReal-table"></table>');
-//     //     $(tableData).each(function (i, rowData) {
-//     //         // console.log(rowData[0]);
-
-//     //         if (i === 0) {
-//     //             var row = $('<tr class="header"></tr>');
-//     //             $(rowData).each(function (j, cellData) {
-//     //                 var columnHeaderClass = convertToSlug(cellData);
-//     //                 row.append($('<th class="' + columnHeaderClass + '">' + cellData + '</th>'));
-//     //             });
-//     //         }
-//     //         if (i > 1) {
-//     //             // console.log(rowData[0]);
-//     //             var rowCellClass = convertToSlug(rowData[0]);
-
-//     //             var row = $('<tr class="' + rowCellClass + '"></tr>');
-//     //             $(rowData).each(function (j, cellData) {
-//     //                 var rowCellClassa = convertToSlug(cellData);
-//     //                 // console.log(columnHeaderClass);
-//     //                 row.append($('<td class="' + rowCellClassa + '">' + cellData + '</td>'));
-//     //             });
-//     //         }
-
-//     //         table.append(row);
-//     //     });
-//     //     return table;
-//     // }
-
-//     const queryString = window.location.search;
-//     const urlParams = new URLSearchParams(queryString);
-//     const country = urlParams.get('country')
-//     console.log(country);
-
-//     if (country) {
-//         $(document).ajaxComplete(function () {
-//             $('.table-container .beReal-table tr.' + country).addClass('active');
-//             $('.table-container').addClass('filtered');
-//         });
-//     } else {
-//     }
-
-
-// });
-
 "use strict";
-jQuery(document).ready(function ($) {
-  $("input#current-country").on("focus", function (e) {
-    // e.preventDefault();
-    $(this).toggleClass('active');
-  });
-  $("#current-date").on("click", function (e) {
-    e.preventDefault();
-    $(this).toggleClass('active');
-  });
-  $('input#current-country').on('input', function () {
-    ulFilter();
-  });
 
   $(document).mouseup(function (e) {
     var currentCountry = $("#current-country");
@@ -110,10 +15,6 @@ jQuery(document).ready(function ($) {
       $(currentDate).removeClass('active');
     }
   });
-
-  // $("#ulFilter").focus(function () {
-  //   $('#countrySelector').toggleClass('active');
-  // });
 
   function ulFilter() {
     var input, filter, ul, li, a, i, txtValue;

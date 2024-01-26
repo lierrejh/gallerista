@@ -1,19 +1,11 @@
-@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@700&display=swap");
 
 :root {
-  --primary-clr: #141419;
+  --primary-clr: #000000;
   --white: #ffffff;
   --text-clr: #000000;
   --tabs-list-bg-clr: #ffffff;
   --btn-hvr: #cffa9a;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  list-style: none;
-  font-family: "Barlow";
 }
 
 body{
