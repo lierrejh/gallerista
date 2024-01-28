@@ -152,6 +152,6 @@ body{
   border-color: var(--btn-hvr);
 }
 
-tab_body.ul {
+.tab_body.ul {
   list-style-type: circle;
 }
